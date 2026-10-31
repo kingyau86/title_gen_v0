@@ -2,7 +2,6 @@
 import re
 import string
 import time
-import torch
 import streamlit as st
 from titlecase import titlecase
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
