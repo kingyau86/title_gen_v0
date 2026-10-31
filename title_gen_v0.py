@@ -3,7 +3,6 @@ import re
 import string
 import time
 import streamlit as st
-from titlecase import titlecase
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 st.set_page_config(
@@ -108,7 +107,7 @@ if submit_button:
                 with output_container:
                     st.success(f"Generation completed in {elapsed_time:.2f} seconds!")
                     st.markdown("### Model Suggested Research Title:")
-                    st.info(f"**{titlecase(generated_title)}**")
+                    st.info(f"**{generated_title}**")
 
             except Exception as e:
                 st.error(f"An error occurred during execution: {e}")
